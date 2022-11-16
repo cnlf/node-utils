@@ -1,5 +1,5 @@
 {
-    "name": "@lf/node-utils",
+    "name": "@cnlf/node-utils",
     "version": "1.0.0",
     "description": "Toolset in nodejs development",
     "main": "index.js",
