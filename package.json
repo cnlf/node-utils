@@ -1,0 +1,25 @@
+{
+    "name": "@lf/node-utils",
+    "version": "1.0.0",
+    "description": "Toolset in nodejs development",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cnlf/node-utils.git"
+    },
+    "keywords": [
+        "utils"
+    ],
+    "author": "wolf",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/cnlf/node-utils/issues"
+    },
+    "homepage": "https://github.com/cnlf/node-utils#readme",
+    "dependencies": {
+        "crypto-js": "^4.1.1"
+    }
+}
