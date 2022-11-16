@@ -92,8 +92,10 @@ module.exports = {
      * @retrun {string} 转换后的字符串
      */
     toQueryString(object) {
+        object.debug && delete object.debug;
+        object.sign && delete object.sign;
         return Object.keys(object)
-            .filter(key => key !== 'sign' && object[key] !== void 0 && object[key] !== '' && object[key] !== null)
+            .filter(key => object[key] !== void 0 && object[key] !== '' && object[key] !== null)
             .sort()
             .map(key => key + '=' + encodeURIComponent(object[key]))
             .join('&')
