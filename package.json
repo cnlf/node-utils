@@ -1,6 +1,6 @@
 {
     "name": "@cnlf/node-utils",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Toolset in nodejs development",
     "main": "index.js",
     "scripts": {

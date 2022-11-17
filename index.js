@@ -78,6 +78,21 @@ module.exports = {
     },
 
     /**
+     * 随机获取数组中不重复的n个元素
+     * @param {Array} array 数组
+     * @param {number} number 数量
+     * @retrun {Array} 去重后的数组
+     */
+    randomByArray(array, number) {
+        let result = [];
+        for (let i = 0; i < number; i++) {
+            let ran = Math.floor(Math.random() * array.length);
+            result.push(array.splice(ran, 1)[0]);
+        }
+        return result
+    },
+
+    /**
      * 数组去重
      * @param {Array} array 数组
      * @retrun {Array} 去重后的数组
@@ -150,8 +165,13 @@ module.exports = {
      * @param {number} timeout 等待时间（毫秒）
      * @retrun {Promise}
      */
-    sleep(timeout) {
-        return new Promise(resolve => setTimeout(() => resolve(), timeout))
+    sleep(timeout= 1000) {
+        return new Promise(resolve => {
+            let timer = setTimeout(() => {
+                timer = null;
+                return resolve();
+            }, timeout)
+        });
     },
 
     /**
