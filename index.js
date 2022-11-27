@@ -165,7 +165,7 @@ module.exports = {
      * @param {number} timeout 等待时间（毫秒）
      * @retrun {Promise}
      */
-    sleep(timeout= 1000) {
+    sleep(timeout = 1000) {
         return new Promise(resolve => {
             let timer = setTimeout(() => {
                 timer = null;
@@ -202,13 +202,13 @@ module.exports = {
     dateFormat(date, format = 'YYYY-MM-DD HH:mm:ss') {
         const config = {
             YYYY: date.getFullYear(),
-            MM: date.getMonth()+1,
+            MM: date.getMonth() + 1,
             DD: date.getDate(),
             HH: date.getHours(),
             mm: date.getMinutes(),
             ss: date.getSeconds(),
         }
-        for(const key in config){
+        for (const key in config) {
             let value = config[key];
             if (value < 10) {
                 value = '0' + value;
@@ -265,4 +265,24 @@ module.exports = {
         }
         return array;
     },
+
+    /**
+     * 获取平台值
+     * @param {string} platform 平台标识
+     * @retrun {number} 平台值
+     */
+    getPlatformValue(platform) {
+        const map = {
+            'wx': 1,
+            'baidu': 2,
+            'alipay': 3,
+            'toutiao': 4,
+            'qq': 5,
+            'kuai': 6,
+            'app': 7,
+            'ios': 8,
+            'android': 9
+        };
+        return map[platform] || null;
+    }
 }
