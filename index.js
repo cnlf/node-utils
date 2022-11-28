@@ -244,7 +244,10 @@ module.exports = {
      */
     async writeFileSync(filePath, data) {
         try {
-            return await fs.writeFileSync(path.resolve(process.cwd(), filePath), JSON.stringify(data));
+            if (typeof data !== 'string') {
+                data = JSON.stringify(data);
+            }
+            return await fs.writeFileSync(path.resolve(process.cwd(), filePath), data);
         } catch (e) {
             return null;
         }
