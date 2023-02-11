@@ -1,6 +1,6 @@
 {
     "name": "@cnlf/node-utils",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Toolset in nodejs development",
     "main": "index.js",
     "scripts": {
@@ -20,6 +20,8 @@
     },
     "homepage": "https://github.com/cnlf/node-utils#readme",
     "dependencies": {
-        "crypto-js": "^4.1.1"
+        "crypto-js": "^4.1.1",
+        "ipdb": "^0.3.3",
+        "qqwry.ipdb": "^2023.2.8"
     }
 }
