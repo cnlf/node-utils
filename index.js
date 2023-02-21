@@ -125,7 +125,6 @@ module.exports = {
      */
     sign(query, apiSecret) {
         const str = this.toQueryString(query) + '&key=' + apiSecret;
-        console.log('---', str);
         return cryptoJS.MD5(str).toString().toUpperCase();
     },
 
