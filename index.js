@@ -119,13 +119,22 @@ module.exports = {
     },
 
     /**
+     * 转md5
+     * @param {string} str str
+     * @retrun {string} md5
+     */
+    md5(str) {
+        return cryptoJS.MD5(str).toString()
+    },
+
+    /**
      * 接口参数签名
      * @param {Object} query query
      * @retrun {string} 签名
      */
     sign(query, apiSecret) {
         const str = this.toQueryString(query) + '&key=' + apiSecret;
-        return cryptoJS.MD5(str).toString().toUpperCase();
+        return this.md5(str).toUpperCase();
     },
 
     /**
