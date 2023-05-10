@@ -119,6 +119,15 @@ module.exports = {
     },
 
     /**
+     * 转SHA1
+     * @param {string} str str
+     * @retrun {string} SHA1
+     */
+    SHA1(str) {
+        return cryptoJS.SHA1(str).toString();
+    },
+
+    /**
      * 转md5
      * @param {string} str str
      * @retrun {string} md5
